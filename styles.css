@@ -1,0 +1,88 @@
+:root {
+  --clr-main-black: #262626;
+  --clr-shadow-gray: #888888;
+  --clr-salmon: #f08e80;
+}
+
+/* *************************** BASE STYLES *************************** */
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Montserrat", helvetica, sans-serif;
+  /* background-image: linear-gradient(180deg, #fff, var(--clr-main-black)); */
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* *************************** END BASE STYLES *************************** */
+
+/* *************************** START NAVBAR *************************** */
+
+ul.nav-list {
+  display: flex;
+  background-color: black;
+  position: fixed;
+  color: white;
+  width: 100%;
+  top: 0;
+  height: 6rem;
+  justify-content: space-between;
+  box-shadow: 0 2px 30px var(--clr-shadow-gray);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}
+
+.nav-links li {
+  margin: 0.5rem;
+  font-weight: 100;
+}
+
+.nav-logo {
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto 1rem;
+}
+
+/* *************************** END NAVBAR *************************** */
+
+/* *************************** START WELCOME SECTION *************************** */
+
+#welcome-section {
+  margin-top: 20rem;
+  font-size: 1.6rem;
+}
+
+div.image-placeholder {
+  width: 200px;
+  height: 200px;
+  background: skyblue;
+}
+
+/* *************************** END WELCOME SECTION *************************** */
