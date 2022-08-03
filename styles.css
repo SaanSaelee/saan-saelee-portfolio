@@ -38,7 +38,7 @@ a {
 
 /* *************************** START NAVBAR *************************** */
 
-ul.nav-list {
+#navbar {
   display: flex;
   background-color: black;
   position: fixed;
@@ -46,28 +46,24 @@ ul.nav-list {
   width: 100%;
   top: 0;
   height: 6rem;
-  justify-content: space-between;
+  justify-content: flex-end;
   box-shadow: 0 2px 30px var(--clr-shadow-gray);
 }
 
-.nav-links {
+.nav-list {
   display: flex;
   align-items: center;
   font-size: 1.4rem;
   margin: 0 1rem;
 }
 
-.nav-links li {
+.nav-list li {
   margin: 0.5rem;
   font-weight: 100;
 }
 
-.nav-logo {
-  font-size: 2rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: auto 1rem;
+.nav-list li:hover {
+  border-bottom: 1px solid #fff;
 }
 
 /* *************************** END NAVBAR *************************** */
@@ -75,14 +71,31 @@ ul.nav-list {
 /* *************************** START WELCOME SECTION *************************** */
 
 #welcome-section {
-  margin-top: 20rem;
+  margin-top: 10rem;
   font-size: 1.6rem;
+  width: 100%;
 }
 
-div.image-placeholder {
-  width: 200px;
-  height: 200px;
-  background: skyblue;
+.welcome-wrapper {
+  display: flex;
+}
+
+.about-left-wrapper,
+.about-right-wrapper {
+  width: 50%;
+  margin: 5rem;
+}
+
+.about-left-wrapper div {
+  margin: 2rem;
+}
+
+/* *************************** END WELCOME SECTION *************************** */
+
+/* *************************** START SKILLS SECTION *************************** */
+
+.front-end, .back-end, .other, .software-skills {
+  display: flex;
 }
 
 /* *************************** END WELCOME SECTION *************************** */
