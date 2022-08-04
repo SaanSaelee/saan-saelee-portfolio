@@ -42,6 +42,15 @@ img {
   width: 100%;
 }
 
+button {
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+
 .transparent {
   visibility: hidden;
 }
@@ -60,11 +69,11 @@ img {
   position: fixed;
   color: #fff;
   width: 100%;
+  height: 8vh;
   top: 0;
-  height: 7rem;
   justify-content: flex-end;
   transition: box-shadow 0.3s, top 0.8s;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .nav-list {
@@ -79,8 +88,16 @@ img {
   font-weight: 300;
 }
 
-.nav-list li:hover {
-  border-bottom: 1px solid #fff;
+.nav-list li:after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #fff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.nav-list li:hover:after {
+  transform: scaleX(1);
 }
 
 /* *************************** END NAVBAR *************************** */
@@ -137,6 +154,11 @@ img {
   width: 70%;
 }
 
+.about-right-pic {
+  width: 40rem;
+  height: auto;
+}
+
 /* *************************** END WELCOME SECTION *************************** */
 
 /* *************************** START SKILLS SECTION *************************** */
@@ -151,7 +173,7 @@ img {
   justify-content: center;
 }
 
-.skills-header {
+.skills-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
@@ -171,6 +193,7 @@ img {
   margin: 0 1rem;
 }
 
+.technical,
 .front-end,
 .back-end,
 .other,
@@ -208,7 +231,7 @@ img {
   background: var(--clr-main-black);
 }
 
-.projects-header {
+.projects-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
@@ -235,7 +258,7 @@ img {
   justify-content: center;
 }
 
-.education-header {
+.education-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
@@ -246,18 +269,19 @@ img {
   display: flex;
 }
 
-.education-left, .education-right {
+.education-left,
+.education-right {
   width: 50%;
 }
 
-.education-left ul, .education-right ul {
+.education-left ul,
+.education-right ul {
   display: flex;
   flex-direction: column;
 }
 
 .education-left h3 {
-  font-weight: 500;
-  font-size: 2.2rem;
+  font-weight: normal;
 }
 
 .csus {
@@ -281,7 +305,7 @@ img {
   margin: 2rem;
 }
 
-.certs-header {
+.certs-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
@@ -294,7 +318,7 @@ img {
 
 #contact {
   width: 100%;
-  /* height: 80vh; */
+  height: 100vh;
   background: var(--clr-main-black);
   color: white;
   display: flex;
@@ -302,10 +326,50 @@ img {
   justify-content: center;
 }
 
-.contact-header {
+.contact-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
-  margin: 5rem;
 }
+
+.contact-section-subheader {
+  margin: 0 0 5rem;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-details {
+  margin: 1rem;
+}
+
+.contact-links a:after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #fff;
+  transition: transform 250ms ease-in-out;
+  transform: scaleX(0);
+}
+
+.contact-links a:hover:after {
+  transform: scaleX(1);
+}
+
 /* *************************** END CONTACT SECTION *************************** */
+
+/* *************************** START FOOTER SECTION *************************** */
+
+#footer {
+  width: 100%;
+  height: 8vh;
+  background: #fff;
+  color: var(--clr-main-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* *************************** END FOOTER SECTION *************************** */
