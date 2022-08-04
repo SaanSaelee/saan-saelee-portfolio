@@ -1,3 +1,5 @@
+/* *************************** CUSTOM STYLES *************************** */
+
 :root {
   --clr-main-black: #262626;
   --clr-shadow-gray: #888888;
@@ -17,6 +19,7 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-size: 62.5%;
+  letter-spacing: 0.1rem;
 }
 
 body {
@@ -34,21 +37,34 @@ a {
   color: #fff;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
+.transparent {
+  visibility: hidden;
+}
+
+.bold {
+  font-weight: 600;
+}
+
 /* *************************** END BASE STYLES *************************** */
 
 /* *************************** START NAVBAR *************************** */
 
 #navbar {
   display: flex;
-  background-color: black;
+  background-color: var(--clr-main-black);
   position: fixed;
-  color: white;
+  color: #fff;
   width: 100%;
   top: 0;
   height: 7rem;
   justify-content: flex-end;
-  box-shadow: 0 2px 30px var(--clr-shadow-gray);
   transition: box-shadow 0.3s, top 0.8s;
+  opacity: 0.95;
 }
 
 .nav-list {
@@ -77,14 +93,15 @@ a {
 }
 
 .welcome-wrapper {
-  margin-top: 25rem;
+  margin-top: 20rem;
   display: flex;
+  color: var(--clr-main-black);
 }
 
 .about-left-wrapper,
 .about-right-wrapper {
   width: 50%;
-  margin: 2rem;
+  padding: 5rem;
 }
 
 .about-right-wrapper,
@@ -95,7 +112,7 @@ a {
 }
 
 .about-left-wrapper {
-  margin: 2rem;
+  margin: auto;
 }
 
 .about-left-wrapper div {
@@ -127,7 +144,7 @@ a {
 #skills {
   width: 100%;
   height: 100vh;
-  background: black;
+  background: var(--clr-main-black);
   color: white;
   display: flex;
   align-items: center;
@@ -162,4 +179,133 @@ a {
   align-items: center;
 }
 
-/* *************************** END WELCOME SECTION *************************** */
+/* *************************** END SKILLS SECTION *************************** */
+
+/* *************************** START PROJECTS SECTION *************************** */
+
+#projects {
+  width: 100%;
+  height: 100vh;
+  color: var(--clr-main-black);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+}
+
+.projects-wrapper {
+  margin: 0 4rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+}
+
+.projects-grid img:hover {
+  opacity: 0.9;
+  background: var(--clr-main-black);
+}
+
+.projects-header {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 5rem;
+}
+
+.project-title {
+  background: var(--clr-main-black);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* *************************** END PROJECTS SECTION *************************** */
+
+/* *************************** START EDUCATION SECTION *************************** */
+
+#education {
+  width: 100%;
+  height: 100vh;
+  background: var(--clr-main-black);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-header {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 5rem;
+}
+
+.education {
+  display: flex;
+}
+
+.education-left, .education-right {
+  width: 50%;
+}
+
+.education-left ul, .education-right ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-left h3 {
+  font-weight: 500;
+  font-size: 2.2rem;
+}
+
+.csus {
+  font-style: italic;
+}
+
+/* *************************** END EDUCATION SECTION *************************** */
+
+/* *************************** START CERTS SECTION *************************** */
+
+#certs {
+  width: 100%;
+  height: 100vh;
+  color: var(--clr-main-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#certs li {
+  margin: 2rem;
+}
+
+.certs-header {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 5rem;
+}
+
+/* *************************** END CERTS SECTION *************************** */
+
+/* *************************** START CONTACT SECTION *************************** */
+
+#contact {
+  width: 100%;
+  /* height: 80vh; */
+  background: var(--clr-main-black);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-header {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 5rem;
+}
+/* *************************** END CONTACT SECTION *************************** */
