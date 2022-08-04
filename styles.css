@@ -73,7 +73,9 @@ button {
   top: 0;
   justify-content: flex-end;
   transition: box-shadow 0.3s, top 0.8s;
-  opacity: 0.9;
+
+  /* Turning this on makes the hover blink on navbar */
+  /* opacity: 0.9; */
 }
 
 .nav-list {
@@ -92,6 +94,7 @@ button {
   display: block;
   content: "";
   border-bottom: 2px solid #fff;
+  margin-top: 0.5rem;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
@@ -265,23 +268,21 @@ button {
   margin: 5rem;
 }
 
-.education {
-  display: flex;
+.school {
+  margin: 2rem;
 }
 
-.education-left,
-.education-right {
-  width: 50%;
+.school li {
+  margin-top: 0.25rem;
+  font-weight: 200;
 }
 
-.education-left ul,
-.education-right ul {
-  display: flex;
-  flex-direction: column;
+.school-header {
+  margin-bottom: 0.5rem;
 }
 
-.education-left h3 {
-  font-weight: normal;
+.school-header h3 {
+  font-weight: 500;
 }
 
 .csus {
@@ -350,6 +351,7 @@ button {
   display: block;
   content: "";
   border-bottom: 2px solid #fff;
+  margin-top: 0.5rem;
   transition: transform 250ms ease-in-out;
   transform: scaleX(0);
 }
