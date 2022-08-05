@@ -142,7 +142,8 @@ button {
   justify-content: center;
 }
 
-.about-left-wrapper div, .about-right-pic {
+.about-left-wrapper div,
+.about-right-pic {
   margin: 2rem 0;
   padding: 0 5rem;
 }
@@ -169,44 +170,49 @@ button {
 
 /* *************************** START SKILLS SECTION *************************** */
 
-/* #skills {
-  width: 100%;
-  height: 100vh;
-  background: var(--clr-main-black);
-  color: white;
+#skills {
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+  width: 100%;
+  min-height: 100vh;
+  background: var(--clr-main-black);
+  color: white;
+}
 
-/* .skills-section-header {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 500;
-  margin: 5rem;
-} */
-
-/* .skills {
-  margin: 2rem;
-} */
-
-/* .skills h3 {
-  font-weight: 500;
-  font-size: 2.2rem;
-} */
-
-/* .skills li {
-  margin: 0 1rem;
-} */
-
-/* .technical,
+.technical,
 .front-end,
 .back-end,
 .other,
 .software-skills {
   display: flex;
   align-items: center;
-} */
+}
+
+.skills-section-header {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 5rem;
+}
+
+.skills {
+  margin: 2rem;
+}
+
+.skills h3 {
+  font-weight: 500;
+  font-size: 2.8rem;
+}
+
+.skills li,
+.skills h3 {
+  margin: 0 1.6rem;
+}
+
+.skills li {
+  font-size: 2rem;
+}
 
 /* *************************** END SKILLS SECTION *************************** */
 
@@ -381,7 +387,6 @@ button {
 
 /* ***************** Large devices only ***************** */
 @media (max-width: 1920) {
-
 }
 
 @media (min-width: 1200px) {
@@ -389,11 +394,9 @@ button {
 
 /* ***************** Medium devices only ***************** */
 @media (min-width: 992px) and (max-width: 1199px) {
-
-.welcome-wrapper {
-  margin: 10rem auto;
-}
-
+  .welcome-wrapper {
+    margin: 10rem auto;
+  }
 }
 
 /* ***************** Small devices only ***************** */
