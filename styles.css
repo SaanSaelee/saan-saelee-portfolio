@@ -38,7 +38,7 @@ a {
 
 img {
   display: block;
-  width: 100%;
+  min-width: 100%;
 }
 
 .transparent {
@@ -70,7 +70,7 @@ img {
 .nav-list {
   display: flex;
   align-items: center;
-  margin: 0 1rem;
+  justify-content: center;
 }
 
 .nav-list li {
@@ -111,7 +111,7 @@ button {
 .welcome-section-wrapper {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
 
   /* For centering content */
   display: flex;
@@ -128,9 +128,11 @@ button {
   width: 50%;
 }
 
-.about-left-wrapper,
+.about-left-wrapper {
+  margin: 6rem 3rem 6rem 6rem;
+}
 .about-right-wrapper {
-  margin: 5rem;
+  margin: 6rem 6rem 6rem 3rem;
 }
 
 .about-right-wrapper,
@@ -140,35 +142,28 @@ button {
   justify-content: center;
 }
 
-/* .about-left-wrapper {
-  margin: auto;
-} */
+.about-left-wrapper div, .about-right-pic {
+  margin: 2rem 0;
+  padding: 0 5rem;
+}
 
-/* .about-left-wrapper div {
-  margin: 2rem 5rem;
-} */
-
-/* .about-left-header h1 {
+.about-left-header h1 {
   font-size: 4rem;
   font-weight: 500;
-} */
+}
 
-/* .about-left {
+.about-left-summary {
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.8rem;
-} */
+}
 
-/* .about-left-sub {
+.about-left-sub-summary {
   font-size: 1.6rem;
   font-weight: 200;
   line-height: 2.2rem;
-  width: 70%;
-} */
-
-/* .about-right-pic {
-  max-width: 100%;
-} */
+  width: 75%;
+}
 
 /* *************************** END WELCOME SECTION *************************** */
 
