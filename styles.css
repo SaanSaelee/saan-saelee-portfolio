@@ -16,15 +16,19 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
-  height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 
   font-size: 62.5%;
   font-family: "Montserrat", helvetica, sans-serif;
   letter-spacing: 0.1rem;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 li {
@@ -38,14 +42,6 @@ a {
 
 img {
   display: block;
-}
-
-.transparent {
-  visibility: hidden;
-}
-
-.bold {
-  font-weight: 600;
 }
 
 /* *************************** END BASE STYLES *************************** */
@@ -174,7 +170,7 @@ button {
 
 #skills {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
 
   display: flex;
@@ -183,10 +179,6 @@ button {
 
   background: var(--clr-main-black);
   color: white;
-}
-
-.skills-section-wrapper {
-  
 }
 
 .technical,
@@ -211,7 +203,7 @@ button {
 
 .skills h3 {
   font-weight: 500;
-  font-size: 2.8rem;
+  font-size: 2rem;
 }
 
 .skills li,
@@ -220,7 +212,7 @@ button {
 }
 
 .skills li {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 /* *************************** END SKILLS SECTION *************************** */
@@ -247,8 +239,9 @@ button {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem;
+  grid-template-columns: repeat(autofill, minmax(200px, 1fr 1fr 1fr));
+  grid-gap: 2rem;
+  /* margin: 0 auto; */
 }
 
 .project-title {
@@ -268,7 +261,7 @@ button {
 
 #education {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
@@ -300,6 +293,7 @@ button {
 
 .school-header h3 {
   font-weight: 500;
+  font-size: 2rem;
 }
 
 .csus {
@@ -332,13 +326,18 @@ button {
   margin: 5rem;
 }
 
+.certs {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 /* *************************** END CERTS SECTION *************************** */
 
 /* *************************** START CONTACT SECTION *************************** */
 
 #contact {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
