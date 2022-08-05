@@ -16,15 +16,15 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  font-size: 62.5%;
-  letter-spacing: 0.1rem;
-}
 
-body {
+  font-size: 62.5%;
   font-family: "Montserrat", helvetica, sans-serif;
-  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
 }
 
 li {
@@ -38,7 +38,6 @@ a {
 
 img {
   display: block;
-  min-width: 100%;
 }
 
 .transparent {
@@ -105,10 +104,8 @@ button {
 
 /* *************************** START WELCOME SECTION *************************** */
 
-#welcome-section {
-}
-
 .welcome-section-wrapper {
+  /* Responsive viewing settings */
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
@@ -117,6 +114,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: var(--clr-main-black);
 }
 
@@ -166,18 +164,29 @@ button {
   width: 75%;
 }
 
+.profile-pic {
+  width: 60%;
+}
+
 /* *************************** END WELCOME SECTION *************************** */
 
 /* *************************** START SKILLS SECTION *************************** */
 
 #skills {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  min-height: 100vh;
+
   background: var(--clr-main-black);
   color: white;
+}
+
+.skills-section-wrapper {
+  
 }
 
 .technical,
@@ -218,145 +227,148 @@ button {
 
 /* *************************** START PROJECTS SECTION *************************** */
 
-/* #projects {
+#projects {
   width: 100%;
-  height: 100vh;
-  color: var(--clr-main-black);
+  min-height: 100vh;
+
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  display: flex;
-} */
 
-/* .projects-wrapper {
-  margin: 0 4rem;
-} */
+  color: var(--clr-main-black);
+}
 
-/* .projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem;
-} */
-
-/* .projects-grid img:hover {
-  opacity: 0.9;
-  background: var(--clr-main-black);
-} */
-
-/* .projects-section-header {
+.projects-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
-  margin: 5rem;
-} */
+  margin: 5rem 0;
+}
 
-/* .project-title {
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+}
+
+.project-title {
   background: var(--clr-main-black);
   text-align: center;
   padding: 1rem;
-} */
+}
+
+.projects-grid img:hover {
+  opacity: 0.9;
+  background: var(--clr-main-black);
+}
 
 /* *************************** END PROJECTS SECTION *************************** */
 
 /* *************************** START EDUCATION SECTION *************************** */
 
-/* #education {
+#education {
   width: 100%;
   height: 100vh;
-  background: var(--clr-main-black);
-  color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
-} */
 
-/* .education-section-header {
+  background: var(--clr-main-black);
+  color: white;
+}
+
+.education-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
   margin: 5rem;
-} */
+}
 
-/* .school {
+.school {
   margin: 2rem;
-} */
+}
 
-/* .school li {
+.school li {
   margin-top: 0.25rem;
   font-weight: 200;
-} */
+}
 
-/* .school-header {
+.school-header {
   margin-bottom: 0.5rem;
-} */
+}
 
-/* .school-header h3 {
+.school-header h3 {
   font-weight: 500;
-} */
+}
 
-/* .csus {
+.csus {
   font-style: italic;
-} */
+}
 
 /* *************************** END EDUCATION SECTION *************************** */
 
 /* *************************** START CERTS SECTION *************************** */
 
-/* #certs {
+#certs {
   width: 100%;
-  height: 100vh;
-  color: var(--clr-main-black);
+  min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
-} */
 
-/* #certs li {
+  color: var(--clr-main-black);
+}
+
+#certs li {
   margin: 2rem;
-} */
+}
 
-/* .certs-section-header {
+.certs-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
   margin: 5rem;
-} */
+}
 
 /* *************************** END CERTS SECTION *************************** */
 
 /* *************************** START CONTACT SECTION *************************** */
 
-/* #contact {
+#contact {
   width: 100%;
   height: 100vh;
-  background: var(--clr-main-black);
-  color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
-} */
 
-/* .contact-section-header {
+  background: var(--clr-main-black);
+  color: white;
+}
+
+.contact-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
-} */
+}
 
-/* .contact-section-subheader {
+.contact-section-subheader {
   margin: 0 0 5rem;
   text-align: center;
-} */
+}
 
-/* .contact-links {
+.contact-links {
   display: flex;
   justify-content: center;
-} */
+}
 
-/* .contact-details {
+.contact-details {
   margin: 1rem;
-} */
+}
 
-/* .contact-links a:after {
+.contact-links a:after {
   display: block;
   content: "";
   border-bottom: 2px solid #fff;
@@ -367,21 +379,23 @@ button {
 
 .contact-links a:hover:after {
   transform: scaleX(1);
-} */
+}
 
 /* *************************** END CONTACT SECTION *************************** */
 
 /* *************************** START FOOTER SECTION *************************** */
 
-/* #footer {
+#footer {
   width: 100%;
   height: 8vh;
-  background: #fff;
-  color: var(--clr-main-black);
+
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+
+  background: #fff;
+  color: var(--clr-main-black);
+}
 
 /* *************************** END FOOTER SECTION *************************** */
 
@@ -394,9 +408,6 @@ button {
 
 /* ***************** Medium devices only ***************** */
 @media (min-width: 992px) and (max-width: 1199px) {
-  .welcome-wrapper {
-    margin: 10rem auto;
-  }
 }
 
 /* ***************** Small devices only ***************** */
