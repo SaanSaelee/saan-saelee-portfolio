@@ -56,10 +56,9 @@ img {
   width: 100%;
   background-color: var(--clr-main-black);
   color: #fff;
-  transition: box-shadow 0.3s, top 0.8s;
 
   /* Turning this on makes the hover blink on navbar */
-  /* opacity: 0.9; */
+  opacity: 0.9;
 }
 
 .nav-list {
@@ -74,7 +73,7 @@ img {
   font-weight: 300;
 }
 
-.nav-list li:after {
+.hover a:after {
   display: block;
   content: "";
   border-bottom: 2px solid #fff;
@@ -83,7 +82,7 @@ img {
   transition: transform 250ms ease-in-out;
 }
 
-.nav-list li:hover:after {
+.hover a:hover:after {
   transform: scaleX(1);
 }
 
@@ -123,10 +122,10 @@ button {
 }
 
 .about-left-wrapper {
-  margin: 6rem 3rem 6rem 6rem;
+  margin: 6rem 0 6rem 6rem;
 }
 .about-right-wrapper {
-  margin: 6rem 6rem 6rem 3rem;
+  margin: 6rem 6rem 6rem 0;
 }
 
 .about-right-wrapper,
@@ -222,38 +221,76 @@ button {
 #projects {
   width: 100%;
   min-height: 100vh;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: var(--clr-main-black);
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
 }
 
 .projects-section-header {
-  text-align: center;
   font-size: 4rem;
   font-weight: 500;
-  margin: 5rem 0;
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+}
+
+/* @media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+} */
+
+.project-title {
+  font-size: 2rem;
+  text-align: center;
+  /* padding: 2rem 0.5rem; */
+  padding: 1rem;
+  background: var(--clr-main-black);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(autofill, minmax(200px, 1fr 1fr 1fr));
-  grid-gap: 2rem;
-  /* margin: 0 auto; */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  overflow: hidden;
 }
 
-.project-title {
-  background: var(--clr-main-black);
-  text-align: center;
-  padding: 1rem;
+/* @media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+} */
+
+.project-image {
+  width: 100%;
+  object-fit: cover;
 }
 
-.projects-grid img:hover {
+.project {
+  width: 100%;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 50%;
+}
+
+.project:hover {
+  transform: scale(1.1);
+  width: 100%;
+}
+
+/* .project:hover {
   opacity: 0.9;
   background: var(--clr-main-black);
-}
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+} */
 
 /* *************************** END PROJECTS SECTION *************************** */
 
@@ -386,7 +423,7 @@ button {
 
 #footer {
   width: 100%;
-  height: 8vh;
+  height: 15vh;
 
   display: flex;
   align-items: center;
