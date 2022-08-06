@@ -56,6 +56,7 @@ img {
   width: 100%;
   background-color: var(--clr-main-black);
   color: #fff;
+  z-index: 100;
 
   /* Turning this on makes the hover blink on navbar */
   /* opacity: 0.9; */
@@ -135,6 +136,7 @@ button {
   justify-content: center;
 }
 
+/* Padding between the elements on the left half */
 .about-left-wrapper div,
 .about-right-pic {
   margin: 2rem 0;
@@ -244,9 +246,9 @@ button {
 .project-title {
   font-size: 2rem;
   text-align: center;
-  /* padding: 2rem 0.5rem; */
   padding: 1rem;
   background: var(--clr-main-black);
+  font-weight: 200;
 }
 
 .projects-grid {
@@ -287,13 +289,12 @@ button {
 
 .image .zoom-in img {
   transform: scale(1);
-  transition: 0.3s ease-in-out;
+  transition: 250ms ease-in-out;
 }
 
 .image .zoom-in:hover img {
-  transform: scale(1.5);
-  opacity: 0.5;
-  /* background: var(--clr-main-black); */
+  transform: scale(1.3);
+  opacity: 0.7;
 }
 
 /* *************************** END PROJECTS SECTION *************************** */
@@ -392,11 +393,7 @@ button {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
-}
-
-.contact-section-subheader {
   margin: 0 0 5rem;
-  text-align: center;
 }
 
 .contact-links {
@@ -448,6 +445,114 @@ button {
 
 /* ***************** Medium devices only ***************** */
 @media (min-width: 992px) and (max-width: 1199px) {
+  /* NAVBAR */
+
+  .nav-list li {
+    font-size: calc(2rem - 20%);
+  }
+
+  button {
+    font-size: calc(2rem - 20%);
+  }
+
+  /* WELCOME SECTION */
+
+  .about-left-wrapper {
+    margin: 2rem 0 2rem 6rem;
+  }
+  .about-right-wrapper {
+    margin: 2rem 2rem 2rem 0;
+  }
+
+  .about-left-wrapper div,
+  .about-right-pic {
+    margin: 2rem 0;
+    padding: 0 3rem;
+  }
+
+  .about-left-header h1 {
+    font-size: calc(4rem - 20%);
+  }
+
+  .about-left-summary {
+    font-size: calc(2rem - 20%);
+    line-height: calc(2.8rem - 20%);
+  }
+
+  .about-left-sub-summary {
+    font-size: calc(1.6rem - 20%);
+    line-height: calc(2.2rem - 20%);
+  }
+
+  /* SKILLS SECTION */
+
+  .skills-section-header {
+    font-size: calc(4rem - 20%);
+    margin: 5rem;
+  }
+
+  .skills {
+    margin: 2rem;
+  }
+
+  .skills h3 {
+    font-size: calc(2rem - 20%);
+  }
+
+  .skills li,
+  .skills h3 {
+    margin: 0 1.6rem;
+  }
+
+  .skills li {
+    font-size: calc(1.6rem - 20%);
+  }
+
+  /* PROJECTS SECTION */
+
+  .projects-section-header {
+    font-size: calc(4rem - 20%);
+  }
+
+  .project-title {
+    font-size: calc(2rem - 20%);
+  }
+
+  /* EDUCATION SECTION */
+
+  .education-section-header {
+    font-size: calc(4rem - 20%);
+  }
+
+  .school-header h3 {
+    font-size: calc(2rem - 20%);
+  }
+
+  /* CERTS SECTION */
+
+  .certs-section-header {
+    font-size: calc(4rem - 20%);
+  }
+
+  .certs {
+    font-size: calc(2rem - 20%);
+  }
+
+  /* CONTACT SECTION */
+
+  .contact-section-header {
+    font-size: calc(4rem - 20%);
+  }
+
+  .contact-links {
+    font-size: calc(1.6rem - 20%);
+  }
+
+  /* FOOTER SECTION */
+
+  #footer {
+    font-size: calc(1.6rem - 20%);
+  }
 }
 
 /* ***************** Small devices only ***************** */
