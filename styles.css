@@ -667,6 +667,10 @@ button {
     font-size: calc(1.6rem - 40%);
   }
 
+  .contact-links::after {
+    border-bottom: 1px solid #fff;
+  }
+
   /* FOOTER SECTION */
 
   #footer {
