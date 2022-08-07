@@ -196,7 +196,7 @@ button {
 #skills {
   width: 100%;
   min-height: 100vh;
-  margin: auto;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
@@ -207,57 +207,52 @@ button {
   color: white;
 }
 
-.skills-section-wrapper {
+.skills-hard {
   width: 100%;
-  padding: 0 4rem 4rem;
-}
-
-.skills {
+  padding: 2rem 4rem;
   display: flex;
-  align-items: left;
-  justify-content: left;
-}
-
-.technical ul,
-.front-end ul,
-.back-end ul,
-.other ul,
-.software-skills ul {
-  display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.skills-soft {
+  padding: 2rem 4rem;
+  display: flex;
+}
+
+.front-end,
+.back-end,
+.other,
+.software, .key-comp, .super-skills {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
 }
 
 .skills-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
-  margin: 5rem 5rem 2rem;
-}
-
-.skills {
   margin: 2rem;
 }
 
-.skills div {
+/* Skills section header */
+.skills div, .skills-soft div {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-.skills h3 {
-  margin: 0;
-}
-
-.skills h3,
-.skills h4 {
+.skills-header h3 {
   font-weight: 500;
   font-size: 2rem;
 }
 
-.skills li {
-  margin: 0 1.6rem;
-  font-size: 1.6rem;
+.skills h4, .skills-soft h4 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.skills li, .skills-soft li {
+  margin: .5rem;
 }
 
 /* *************************** END SKILLS SECTION *************************** */
@@ -295,7 +290,6 @@ button {
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 4rem;
   width: 100%;
-  max-width: 1280px;
 }
 
 .project-image {
