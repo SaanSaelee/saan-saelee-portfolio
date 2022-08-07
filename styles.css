@@ -83,6 +83,10 @@ button {
   cursor: pointer;
 }
 
+.contact-btn {
+  color: white;
+}
+
 /* Navbar hover */
 .hover a:after {
   display: block;
