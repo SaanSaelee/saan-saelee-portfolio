@@ -71,6 +71,7 @@ nav ul li {
 
 nav ul li a {
   display: inline-block;
+  text-decoration: none;
 }
 
 button {
@@ -80,6 +81,7 @@ button {
   padding: 1rem 2rem;
   border: none;
   cursor: pointer;
+  color: #fff;
 }
 
 /* Navbar hover */
@@ -207,14 +209,6 @@ button {
   color: white;
 }
 
-.skills-hard,
-.skills-soft {
-  width: 100%;
-  padding: 2rem 4rem;
-  display: flex;
-  justify-content: center;
-}
-
 .front-end,
 .back-end,
 .other,
@@ -224,6 +218,14 @@ button {
   display: flex;
   flex-direction: column;
   margin: 2rem;
+}
+
+.skills-hard,
+.skills-soft {
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 .skills-section-header {
