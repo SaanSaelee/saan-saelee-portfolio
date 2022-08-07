@@ -55,7 +55,7 @@ header {
   background-color: var(--clr-main-black);
   position: fixed;
   z-index: 100;
-  color: #fff;
+  color: var(--clr-main-black);
 }
 
 nav {
@@ -84,7 +84,7 @@ button {
 }
 
 .contact-btn {
-  color: white;
+  color: #;
 }
 
 /* Navbar hover */
