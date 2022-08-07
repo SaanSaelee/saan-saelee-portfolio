@@ -3,7 +3,6 @@
 :root {
   --clr-main-black: #262626;
   --clr-shadow-gray: #888888;
-  --clr-salmon: #f08e80;
 }
 
 /* *************************** BASE STYLES *************************** */
@@ -14,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 html,
@@ -23,7 +23,7 @@ body {
   scroll-behavior: smooth;
 
   font-size: 62.5%;
-  font-family: "Montserrat", helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif, helvetica;
   letter-spacing: 0.1rem;
 }
 
@@ -48,43 +48,29 @@ img {
 
 /* *************************** START NAVBAR *************************** */
 
-#navbar {
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
+header {
+  display: inline-block;
   width: 100%;
+  padding: 1rem;
   background-color: var(--clr-main-black);
-  color: #fff;
+  position: fixed;
   z-index: 100;
-
-  /* Turning this on makes the hover blink on navbar */
-  /* opacity: 0.9; */
+  color: #fff;
 }
 
-.nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+nav {
+  float: right;
 }
 
-.nav-list li {
-  margin: 1rem;
+nav ul li {
+  display: inline-block;
+  padding: 0.5rem 1rem;
   font-size: 2rem;
   font-weight: 300;
 }
 
-.hover a:after {
-  display: block;
-  content: "";
-  border-bottom: 2px solid #fff;
-  margin-top: 0.5rem;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
-}
-
-.hover a:hover:after {
-  transform: scaleX(1);
+nav ul li a {
+  display: inline-block;
 }
 
 button {
@@ -94,6 +80,49 @@ button {
   padding: 1rem 2rem;
   border: none;
   cursor: pointer;
+}
+
+/* Navbar hover */
+.hover a:after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #fff;
+  margin-top: 0.5rem;
+  transform: scaleX(0);
+  transition: transform 200ms ease-in-out;
+}
+
+.hover a:hover:after {
+  transform: scaleX(1);
+}
+
+/* Hamburger button & Logo on Navbar- Hidden by default */
+.logo {
+  float: left;
+  position: relative;
+  left: 1rem;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  display: none;
+  padding: 1rem;
+}
+
+.toggle-btn {
+  width: 35px;
+  position: absolute;
+  right: 3rem;
+  top: 2.5rem;
+  display: none;
+}
+
+.toggle-btn span {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  float: left;
+  margin-bottom: 8px;
 }
 
 /* *************************** END NAVBAR *************************** */
@@ -116,16 +145,11 @@ button {
 
 .about-left-wrapper {
   width: 50%;
+  margin: 6rem 0 6rem 6rem;
 }
 
 .about-right-wrapper {
   width: 50%;
-}
-
-.about-left-wrapper {
-  margin: 6rem 0 6rem 6rem;
-}
-.about-right-wrapper {
   margin: 6rem 6rem 6rem 0;
 }
 
@@ -227,7 +251,7 @@ button {
 
 .projects-section {
   text-align: center;
-  padding: 10rem 2rem;
+  padding: 10rem 4rem;
 }
 
 .projects-section-header {
@@ -236,12 +260,6 @@ button {
   max-width: 640px;
   margin: 0 auto 6rem auto;
 }
-
-/* @media (max-width: 28.75em) {
-  .projects-section-header {
-    font-size: 4rem;
-  }
-} */
 
 .project-title {
   font-size: 2rem;
@@ -257,19 +275,7 @@ button {
   grid-gap: 4rem;
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 6rem;
 }
-
-/* @media (max-width: 30.625em) {
-  .projects-section {
-    padding: 6rem 1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-} */
 
 .project-image {
   width: 100%;
@@ -289,7 +295,7 @@ button {
 
 .image .zoom-in img {
   transform: scale(1);
-  transition: 250ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 .image .zoom-in:hover img {
@@ -370,6 +376,9 @@ button {
 
 .certs {
   font-size: 2rem;
+}
+
+.certs-bold {
   font-weight: 500;
 }
 
@@ -410,7 +419,7 @@ button {
   content: "";
   border-bottom: 2px solid #fff;
   margin-top: 0.5rem;
-  transition: transform 250ms ease-in-out;
+  transition: transform 200ms ease-in-out;
   transform: scaleX(0);
 }
 
@@ -440,14 +449,11 @@ button {
 @media (max-width: 1920) {
 }
 
-@media (min-width: 1200px) {
-}
-
 /* ***************** Medium devices only ***************** */
 @media (min-width: 992px) and (max-width: 1199px) {
   /* NAVBAR */
 
-  .nav-list li {
+  nav ul li {
     font-size: calc(2rem - 20%);
   }
 
@@ -488,24 +494,14 @@ button {
 
   .skills-section-header {
     font-size: calc(4rem - 20%);
-    margin: 5rem;
-  }
-
-  .skills {
-    margin: 2rem;
   }
 
   .skills h3 {
     font-size: calc(2rem - 20%);
   }
 
-  .skills li,
-  .skills h3 {
-    margin: 0 1.6rem;
-  }
-
   .skills li {
-    font-size: calc(1.6rem - 20%);
+    font-size: calc(1.6rem - 0%);
   }
 
   /* PROJECTS SECTION */
@@ -526,6 +522,10 @@ button {
 
   .school-header h3 {
     font-size: calc(2rem - 20%);
+  }
+
+  .course {
+    font-size: calc(1.6rem - 20%);
   }
 
   /* CERTS SECTION */
@@ -555,10 +555,308 @@ button {
   }
 }
 
-/* ***************** Small devices only ***************** */
+/* ***************** Small devices only (iPad) ***************** */
 @media (min-width: 768px) and (max-width: 991px) {
+  /* NAVBAR */
+
+  nav ul li {
+    font-size: calc(2rem - 40%);
+    padding: 0.5rem 0.5rem;
+  }
+
+  button {
+    font-size: calc(2rem - 40%);
+  }
+
+  .hover a:after {
+    border-bottom: 1px solid #fff;
+  }
+
+  /* WELCOME SECTION */
+
+  .about-left-wrapper {
+    margin: 1rem 0 1rem 5rem;
+  }
+
+  .about-right-wrapper {
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  .about-left-wrapper div,
+  .about-right-pic {
+    margin: 1rem 0;
+    padding: 0 1.5rem;
+  }
+
+  .about-left-header h1 {
+    font-size: calc(4rem - 40%);
+  }
+
+  .about-left-summary {
+    font-size: calc(2rem - 40%);
+    line-height: calc(2.8rem - 40%);
+  }
+
+  .about-left-sub-summary {
+    font-size: calc(1.6rem - 40%);
+    line-height: calc(2.2rem - 40%);
+  }
+
+  /* SKILLS SECTION */
+
+  .skills-section-header {
+    font-size: calc(4rem - 40%);
+    margin: 4rem;
+  }
+
+  .skills h3 {
+    font-size: calc(2rem - 40%);
+  }
+
+  .skills li,
+  .skills h3 {
+    margin: 0 1rem;
+  }
+
+  .skills li {
+    font-size: calc(1.6rem - 40%);
+  }
+
+  /* PROJECTS SECTION */
+
+  .projects-section-header {
+    font-size: calc(4rem - 40%);
+  }
+
+  .project-title {
+    font-size: calc(2rem - 40%);
+  }
+
+  /* EDUCATION SECTION */
+
+  .education-section-header {
+    font-size: calc(4rem - 40%);
+  }
+
+  .school-header h3 {
+    font-size: calc(2rem - 40%);
+  }
+
+  .course {
+    font-size: calc(1.6rem - 40%);
+  }
+
+  /* CERTS SECTION */
+
+  .certs-section-header {
+    font-size: calc(4rem - 40%);
+  }
+
+  .certs {
+    font-size: calc(2rem - 40%);
+  }
+
+  /* CONTACT SECTION */
+
+  .contact-section-header {
+    font-size: calc(4rem - 40%);
+    margin: 0 4rem 5rem;
+  }
+
+  .contact-links {
+    font-size: calc(1.6rem - 40%);
+  }
+
+  /* FOOTER SECTION */
+
+  #footer {
+    font-size: calc(1.6rem - 40%);
+  }
 }
 
-/* ***************** Extra Small devices only ***************** */
-@media (max-width: 767px) {
+/* ***************** Extra Small devices only (iPhone 12 Pro) ***************** */
+@media only screen and (max-width: 767px) {
+  /* NAVBAR */
+
+  .logo {
+    display: block;
+  }
+
+  .name-hidden {
+    display: none;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  nav.show {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    font-size: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .hover a:after {
+    border-bottom: 0.5px solid #fff;
+  }
+
+  /* WELCOME SECTION */
+
+  .welcome-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--clr-main-black);
+  }
+
+  .about-left-wrapper {
+    margin: 5rem auto 0;
+    width: 100%;
+  }
+
+  .about-right-wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about-left-wrapper div {
+    width: 100%;
+  }
+
+  .about-left-summary {
+    font-size: calc(2rem - 40%);
+    line-height: calc(2.8rem - 40%);
+  }
+
+  .about-left-sub-summary {
+    font-size: calc(1.6rem - 40%);
+    line-height: calc(2.2rem - 40%);
+  }
+
+  .profile-pic {
+    width: 100%;
+    padding: 4rem;
+  }
+
+  /* SKILLS SECTION */
+
+  .skills-section-header {
+    font-size: calc(4rem - 70%);
+    margin: 4rem;
+  }
+
+  .technical,
+  .front-end,
+  .back-end,
+  .other,
+  .software-skills {
+    flex-direction: column;
+  }
+
+  .skills h3 {
+    font-size: calc(2rem - 20%);
+    border-bottom: 1px solid #fff;
+  }
+
+  .skills li,
+  .skills h3 {
+    margin: 0.25rem 0;
+  }
+
+  .skills li {
+    font-size: calc(1.6rem - 20%);
+  }
+
+  /* PROJECTS SECTION */
+
+  .projects-section-header {
+    font-size: calc(4rem - 70%);
+    margin: 4rem;
+  }
+
+  .project-title {
+    font-size: calc(2rem - 50%);
+  }
+
+  .projects-grid {
+    margin: auto;
+    /* This will center the grid */
+    grid-template-columns: 1fr;
+  }
+
+  /* EDUCATION SECTION */
+
+  .education {
+    margin: 4rem;
+    position: relative;
+  }
+
+  .education-section-header {
+    font-size: calc(4rem - 70%);
+  }
+
+  .school-header h3 {
+    font-size: calc(2rem - 20%);
+  }
+
+  .course {
+    font-size: calc(1.6rem - 20%);
+  }
+
+  /* CERTS SECTION */
+
+  .certs-section-header {
+    font-size: calc(4rem - 70%);
+  }
+
+  .certs {
+    font-size: calc(2rem - 20%);
+    padding: 0 4rem;
+  }
+
+  /* CONTACT SECTION */
+
+  .contact-section-header {
+    font-size: calc(4rem - 70%);
+    margin: 0 4rem 5rem;
+  }
+
+  .contact-links {
+    font-size: calc(1.6rem - 20%);
+    flex-direction: column;
+    margin: 4rem;
+    align-items: center;
+  }
+
+  .contact-links::after {
+    border-bottom: 1px solid #fff;
+  }
+
+  /* FOOTER SECTION */
+
+  #footer {
+    font-size: calc(1.6rem - 20%);
+  }
 }

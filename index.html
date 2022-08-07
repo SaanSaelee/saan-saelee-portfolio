@@ -27,16 +27,29 @@
     <main>
 
         <!-- START NAV -->
-        <nav id="navbar">
-            <ul class="nav-list">
-                <li class="hover"><a href="#top">About</a></li>
-                <li class="hover"><a href="#skills">Skills</a></li>
-                <li class="hover"><a href="#projects">Projects</a></li>
-                <li class="hover"><a href="#education">Education</a></li>
-                <li class="hover"><a href="#certs">Certs</a></li>
-                <li class="hover"><a href="#contact"><button>Contact</button></a></li>
-            </ul>
-        </nav>
+
+        <header>
+            <div class="toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="logo">
+                <p>Saan Sinh Saelee</p>
+            </div>
+
+            <nav id="navbar">
+                <ul class="nav-list">
+                    <li class="hover"><a href="#top">About</a></li>
+                    <li class="hover"><a href="#skills">Skills</a></li>
+                    <li class="hover"><a href="#projects">Projects</a></li>
+                    <li class="hover"><a href="#education">Education</a></li>
+                    <li class="hover"><a href="#certs">Certs</a></li>
+                    <li class="hover"><a href="#contact"><button>Contact</button></a></li>
+                </ul>
+            </nav>
+        </header>
         <!-- END NAV -->
 
         <!-- START WELCOME SECTION -->
@@ -44,7 +57,7 @@
             <div class="welcome-section-wrapper">
                 <div class="about-left-wrapper">
                     <div class="about-left-header">
-                        <h1>Saan Sinh Saelee</h1>
+                        <h1 class="name-hidden">Saan Sinh Saelee</h1>
                     </div>
                     <div class="about-left-summary">
                         <p>I am an energetic and enthusiastic self-taught junior front-end developer with experience
@@ -213,10 +226,10 @@
                             <li class="school-header">
                                 <h3>freeCodeCamp</h3>
                             </li>
-                            <li>
+                            <li class="course">
                                 Responsive Web Design
                             </li>
-                            <li>
+                            <li class="course">
                                 Front End Development Libraries
                             </li>
                     </div>
@@ -225,10 +238,10 @@
                             <li class="school-header">
                                 <h3>Udemy</h3>
                             </li>
-                            <li>
+                            <li class="course">
                                 Modern JavaScript (Colt Steele)
                             </li>
-                            <li>
+                            <li class="course">
                                 SQL for Data Science
                             </li>
                         </ul>
@@ -238,7 +251,7 @@
                             <li class="school-header">
                                 <h3>HarvardX</h3>
                             </li>
-                            <li>CS50</li>
+                            <li class="course">CS50</li>
                         </ul>
                     </div>
                     <div class="school">
@@ -247,9 +260,9 @@
                                 <h3>California State University, <span class="csus">Sacramento</span></h3>
                             </li>
                             <li>
-                                <p>Bachelor of Arts</p>
-                                <p> of Social Sciences & Interdisciplinary Studies</p>
-                                <p class="csus">Psychology</p>
+                                <p class="course">Bachelor of Arts</p>
+                                <p class="course"> of Social Sciences & Interdisciplinary Studies</p>
+                                <p class="csus course">Psychology</p>
                             </li>
                         </ul>
                     </div>
@@ -266,9 +279,9 @@
                 </div>
                 <div>
                     <ul>
-                        <li><span class="certs">Professional Scrum Master I (PSM I)</span> |
+                        <li class="certs"><span class="certs-bold">Professional Scrum Master I (PSM I)</span> |
                             SCRUM.ORG | CREDENTIAL ID: 802709</li>
-                        <li><span class="certs">Google IT Support Professional</span> |
+                        <li class="certs"><span class="certs-bold">Google IT Support Professional</span> |
                             GOOGLE | CREDENTIAL ID: 2MH6WG3ABWAR</li>
                     </ul>
                 </div>
@@ -309,6 +322,7 @@
 
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 
 </html>
