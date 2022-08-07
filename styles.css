@@ -196,47 +196,67 @@ button {
 #skills {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
+  margin: auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   background: var(--clr-main-black);
   color: white;
 }
 
-.technical,
-.front-end,
-.back-end,
-.other,
-.software-skills {
+.skills-section-wrapper {
+  width: 100%;
+  padding: 0 4rem 4rem;
+}
+
+.skills {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.technical ul,
+.front-end ul,
+.back-end ul,
+.other ul,
+.software-skills ul {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .skills-section-header {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
-  margin: 5rem;
+  margin: 5rem 5rem 2rem;
 }
 
 .skills {
   margin: 2rem;
 }
 
+.skills div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .skills h3 {
+  margin: 0;
+}
+
+.skills h3,
+.skills h4 {
   font-weight: 500;
   font-size: 2rem;
 }
 
-.skills li,
-.skills h3 {
-  margin: 0 1.6rem;
-}
-
 .skills li {
+  margin: 0 1.6rem;
   font-size: 1.6rem;
 }
 
@@ -252,6 +272,7 @@ button {
 .projects-section {
   text-align: center;
   padding: 10rem 4rem;
+  margin: auto;
 }
 
 .projects-section-header {
@@ -271,7 +292,7 @@ button {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 4rem;
   width: 100%;
   max-width: 1280px;
@@ -454,11 +475,11 @@ button {
   /* NAVBAR */
 
   nav ul li {
-    font-size: calc(2rem - 20%);
+    font-size: calc(2rem - 10%);
   }
 
   button {
-    font-size: calc(2rem - 20%);
+    font-size: calc(2rem - 10%);
   }
 
   /* WELCOME SECTION */
@@ -477,81 +498,82 @@ button {
   }
 
   .about-left-header h1 {
-    font-size: calc(4rem - 20%);
+    font-size: calc(4rem - 10%);
   }
 
   .about-left-summary {
-    font-size: calc(2rem - 20%);
-    line-height: calc(2.8rem - 20%);
+    font-size: calc(2rem - 10%);
+    line-height: calc(2.8rem - 10%);
   }
 
   .about-left-sub-summary {
-    font-size: calc(1.6rem - 20%);
-    line-height: calc(2.2rem - 20%);
+    font-size: calc(1.6rem - 10%);
+    line-height: calc(2.2rem - 10%);
   }
 
   /* SKILLS SECTION */
 
   .skills-section-header {
-    font-size: calc(4rem - 20%);
+    font-size: calc(4rem - 10%);
   }
 
-  .skills h3 {
-    font-size: calc(2rem - 20%);
+  .skills h3,
+  .skills h4 {
+    font-size: calc(2rem - 10%);
   }
 
   .skills li {
-    font-size: calc(1.6rem - 0%);
+    font-size: calc(1.6rem - 10%);
   }
 
   /* PROJECTS SECTION */
 
   .projects-section-header {
-    font-size: calc(4rem - 20%);
+    font-size: calc(4rem - 10%);
   }
 
   .project-title {
-    font-size: calc(2rem - 20%);
+    font-size: calc(2rem - 10%);
   }
 
   /* EDUCATION SECTION */
 
   .education-section-header {
-    font-size: calc(4rem - 20%);
+    font-size: calc(4rem - 10%);
   }
 
   .school-header h3 {
-    font-size: calc(2rem - 20%);
+    font-size: calc(2rem - 10%);
   }
 
   .course {
-    font-size: calc(1.6rem - 20%);
+    font-size: calc(1.6rem - 10%);
   }
 
   /* CERTS SECTION */
 
   .certs-section-header {
-    font-size: calc(4rem - 20%);
+    font-size: calc(4rem - 10%);
   }
 
   .certs {
-    font-size: calc(2rem - 20%);
+    font-size: calc(2rem - 10%);
   }
 
   /* CONTACT SECTION */
 
   .contact-section-header {
-    font-size: calc(4rem - 20%);
+    font-size: calc(4rem - 10%);
   }
 
   .contact-links {
-    font-size: calc(1.6rem - 20%);
+    font-size: calc(1.6rem - 10%);
   }
 
   /* FOOTER SECTION */
 
   #footer {
-    font-size: calc(1.6rem - 20%);
+    font-size: calc(1.6rem - 10%);
   }
 }
 
@@ -560,12 +582,12 @@ button {
   /* NAVBAR */
 
   nav ul li {
-    font-size: calc(2rem - 40%);
+    font-size: calc(2rem - 30%);
     padding: 0.5rem 0.5rem;
   }
 
   button {
-    font-size: calc(2rem - 40%);
+    font-size: calc(2rem - 30%);
   }
 
   .hover a:after {
@@ -589,82 +611,78 @@ button {
   }
 
   .about-left-header h1 {
-    font-size: calc(4rem - 40%);
+    font-size: calc(4rem - 30%);
   }
 
   .about-left-summary {
-    font-size: calc(2rem - 40%);
-    line-height: calc(2.8rem - 40%);
+    font-size: calc(2rem - 30%);
+    line-height: calc(2.8rem - 30%);
   }
 
   .about-left-sub-summary {
-    font-size: calc(1.6rem - 40%);
-    line-height: calc(2.2rem - 40%);
+    font-size: calc(1.6rem - 30%);
+    line-height: calc(2.2rem - 30%);
   }
 
   /* SKILLS SECTION */
 
   .skills-section-header {
-    font-size: calc(4rem - 40%);
-    margin: 4rem;
+    font-size: calc(4rem - 30%);
+    margin: 4rem 4rem 2rem;
   }
 
-  .skills h3 {
-    font-size: calc(2rem - 40%);
-  }
-
-  .skills li,
-  .skills h3 {
-    margin: 0 1rem;
+  .skills h3,
+  .skills h4 {
+    font-size: calc(2rem - 30%);
   }
 
   .skills li {
-    font-size: calc(1.6rem - 40%);
+    font-size: calc(1.6rem - 30%);
   }
 
   /* PROJECTS SECTION */
 
   .projects-section-header {
-    font-size: calc(4rem - 40%);
+    font-size: calc(4rem - 30%);
   }
 
   .project-title {
-    font-size: calc(2rem - 40%);
+    font-size: calc(2rem - 30%);
   }
 
   /* EDUCATION SECTION */
 
   .education-section-header {
-    font-size: calc(4rem - 40%);
+    font-size: calc(4rem - 30%);
   }
 
   .school-header h3 {
-    font-size: calc(2rem - 40%);
+    font-size: calc(2rem - 30%);
   }
 
   .course {
-    font-size: calc(1.6rem - 40%);
+    font-size: calc(1.6rem - 30%);
   }
 
   /* CERTS SECTION */
 
   .certs-section-header {
-    font-size: calc(4rem - 40%);
+    font-size: calc(4rem - 30%);
   }
 
   .certs {
-    font-size: calc(2rem - 40%);
+    font-size: calc(2rem - 30%);
   }
 
   /* CONTACT SECTION */
 
   .contact-section-header {
-    font-size: calc(4rem - 40%);
+    font-size: calc(4rem - 30%);
     margin: 0 4rem 5rem;
   }
 
   .contact-links {
-    font-size: calc(1.6rem - 40%);
+    font-size: calc(1.6rem - 30%);
   }
 
   .contact-links::after {
@@ -674,7 +692,7 @@ button {
   /* FOOTER SECTION */
 
   #footer {
-    font-size: calc(1.6rem - 40%);
+    font-size: calc(1.6rem - 30%);
   }
 }
 
@@ -717,7 +735,6 @@ button {
   button {
     font-size: 2rem;
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
   }
 
   .hover a:after {
@@ -736,7 +753,7 @@ button {
   }
 
   .about-left-wrapper {
-    margin: 5rem auto 0;
+    margin: 10rem auto 0;
     width: 100%;
   }
 
@@ -750,47 +767,74 @@ button {
   }
 
   .about-left-summary {
-    font-size: calc(2rem - 40%);
-    line-height: calc(2.8rem - 40%);
+    font-size: calc(2rem - 30%);
+    line-height: calc(2.8rem - 30%);
   }
 
   .about-left-sub-summary {
-    font-size: calc(1.6rem - 40%);
-    line-height: calc(2.2rem - 40%);
+    font-size: calc(1.6rem - 30%);
+    line-height: calc(2.2rem - 30%);
   }
 
   .profile-pic {
     width: 100%;
-    padding: 4rem;
+    padding: 4rem 6rem 6rem;
   }
 
   /* SKILLS SECTION */
 
-  .skills-section-header {
-    font-size: calc(4rem - 70%);
-    margin: 4rem;
-  }
-
-  .technical,
-  .front-end,
-  .back-end,
-  .other,
-  .software-skills {
+  #skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
 
+  .skills {
+    margin: 1rem;
+  }
+
+  .technical ul,
+  .front-end ul,
+  .back-end ul,
+  .other ul,
+  .software-skills ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+  }
+
+  .skills-section-header {
+    font-size: calc(4rem - 70%);
+    margin: 6rem auto 2rem;
+  }
+
+  .skills-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 0 6rem 4rem;
+  }
+
   .skills h3 {
+    font-size: calc(2rem - 10%);
+    border-bottom: 1px solid #fff;
+  }
+
+  .skills h4 {
     font-size: calc(2rem - 20%);
     border-bottom: 1px solid #fff;
   }
 
-  .skills li,
-  .skills h3 {
-    margin: 0.25rem 0;
-  }
-
   .skills li {
     font-size: calc(1.6rem - 20%);
+  }
+
+  .skills li,
+  .skills h4 {
+    margin: 0.25rem 0;
   }
 
   /* PROJECTS SECTION */
@@ -849,7 +893,6 @@ button {
 
   .contact-links {
     font-size: calc(1.6rem - 20%);
-    flex-direction: column;
     margin: 4rem;
     align-items: center;
   }
