@@ -212,6 +212,10 @@ button {
   color: white;
 }
 
+.skills-section-wrapper {
+  padding: 6rem 4rem;
+}
+
 .front-end,
 .back-end,
 .other,
@@ -251,6 +255,7 @@ button {
   font-weight: 500;
   font-size: 2rem;
   border-bottom: 1px solid #fff;
+  text-align: center;
 }
 
 .skills-hard li,
