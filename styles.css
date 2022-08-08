@@ -255,6 +255,7 @@ button {
   font-weight: 500;
   font-size: 2rem;
   border-bottom: 1px solid #fff;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -519,12 +520,14 @@ button {
     font-size: calc(4rem - 10%);
   }
 
-  .skills h3,
-  .skills h4 {
+  .skills-header h3,
+  .skills-hard h4,
+  .skills-soft h4 {
     font-size: calc(2rem - 10%);
   }
 
-  .skills li {
+  .skills-hard li,
+  .skills-soft li {
     font-size: calc(1.6rem - 10%);
   }
 
@@ -568,10 +571,6 @@ button {
     font-size: calc(4rem - 10%);
   }
 
-  .contact-links {
-    font-size: calc(1.6rem - 10%);
-  }
-
   /* FOOTER SECTION */
 
   #footer {
@@ -584,12 +583,12 @@ button {
   /* NAVBAR */
 
   nav ul li {
-    font-size: calc(2rem - 30%);
+    font-size: calc(2rem - 20%);
     padding: 0.5rem 0.5rem;
   }
 
   button {
-    font-size: calc(2rem - 30%);
+    font-size: calc(2rem - 20%);
   }
 
   .hover a:after {
@@ -613,16 +612,16 @@ button {
   }
 
   .about-left-header h1 {
-    font-size: calc(4rem - 30%);
+    font-size: calc(4rem - 20%);
   }
 
   .about-left-summary {
-    font-size: calc(2rem - 30%);
-    line-height: calc(2.8rem - 30%);
+    font-size: calc(2rem - 20%);
+    line-height: calc(2.8rem - 20%);
   }
 
   .about-left-sub-summary {
-    font-size: calc(1.6rem - 30%);
+    font-size: calc(1.6rem - 20%);
     line-height: calc(2.2rem - 30%);
   }
 
@@ -633,58 +632,56 @@ button {
     margin: 4rem 4rem 2rem;
   }
 
-  .skills h3,
-  .skills h4 {
-    font-size: calc(2rem - 30%);
+  .skills-header h3,
+  .skills-hard h4,
+  .skills-soft h4 {
+    font-size: calc(2rem - 20%);
   }
 
-  .skills li {
-    font-size: calc(1.6rem - 30%);
+  .skills-hard li,
+  .skills-soft li {
+    font-size: calc(1.6rem - 20%);
   }
 
   /* PROJECTS SECTION */
 
   .projects-section-header {
-    font-size: calc(4rem - 30%);
+    font-size: calc(4rem - 20%);
   }
 
   .project-title {
-    font-size: calc(2rem - 30%);
+    font-size: calc(2rem - 20%);
   }
 
   /* EDUCATION SECTION */
 
   .education-section-header {
-    font-size: calc(4rem - 30%);
+    font-size: calc(4rem - 20%);
   }
 
   .school-header h3 {
-    font-size: calc(2rem - 30%);
+    font-size: calc(2rem - 20%);
   }
 
   .course {
-    font-size: calc(1.6rem - 30%);
+    font-size: calc(1.6rem - 20%);
   }
 
   /* CERTS SECTION */
 
   .certs-section-header {
-    font-size: calc(4rem - 30%);
+    font-size: calc(4rem - 20%);
   }
 
   .certs {
-    font-size: calc(2rem - 30%);
+    font-size: calc(2rem - 20%);
   }
 
   /* CONTACT SECTION */
 
   .contact-section-header {
-    font-size: calc(4rem - 30%);
+    font-size: calc(4rem - 20%);
     margin: 0 4rem 5rem;
-  }
-
-  .contact-links {
-    font-size: calc(1.6rem - 30%);
   }
 
   .contact-links::after {
@@ -694,7 +691,7 @@ button {
   /* FOOTER SECTION */
 
   #footer {
-    font-size: calc(1.6rem - 30%);
+    font-size: calc(1.6rem - 20%);
   }
 }
 
@@ -769,13 +766,13 @@ button {
   }
 
   .about-left-summary {
-    font-size: calc(2rem - 30%);
-    line-height: calc(2.8rem - 30%);
+    font-size: calc(2rem - 20%);
+    line-height: calc(2.8rem - 20%);
   }
 
   .about-left-sub-summary {
-    font-size: calc(1.6rem - 30%);
-    line-height: calc(2.2rem - 30%);
+    font-size: calc(1.6rem - 20%);
+    line-height: calc(2.2rem - 20%);
   }
 
   .profile-pic {
