@@ -94,14 +94,14 @@ button {
   border-bottom: 2px solid #fff;
   margin-top: 0.5rem;
   transform: scaleX(0);
-  transition: transform 200ms ease-in-out;
+  transition: transform 250ms ease-in-out;
 }
 
 .hover a:hover:after {
   transform: scaleX(1);
 }
 
-/* Hamburger button & Logo on Navbar- Hidden by default */
+/* Toggle button & Logo on Navbar- Hidden by default */
 .logo {
   float: left;
   position: relative;
@@ -111,6 +111,7 @@ button {
   font-weight: 400;
   display: none;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .toggle-btn {
@@ -119,6 +120,7 @@ button {
   right: 3rem;
   top: 2.5rem;
   display: none;
+  cursor: pointer;
 }
 
 .toggle-btn span {
@@ -242,13 +244,6 @@ button {
   justify-content: center;
 }
 
-/* Skills section header */
-/* .skills-hard div,
-.skills-soft div {
-  display: flex;
-  align-items: center;
-} */
-
 .skills-header h3,
 .skills-hard h4,
 .skills-soft h4 {
@@ -319,7 +314,7 @@ button {
 
 .image .zoom-in img {
   transform: scale(1);
-  transition: 200ms ease-in-out;
+  transition: 250ms ease-in-out;
 }
 
 .image .zoom-in:hover img {
