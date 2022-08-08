@@ -245,15 +245,12 @@ button {
   align-items: center;
 }
 
-.skills-header h3 {
-  font-weight: 500;
-  font-size: 2rem;
-}
-
+.skills-header h3,
 .skills-hard h4,
 .skills-soft h4 {
   font-weight: 500;
   font-size: 2rem;
+  border-bottom: 1px solid #fff;
 }
 
 .skills-hard li,
