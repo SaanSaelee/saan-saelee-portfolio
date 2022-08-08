@@ -84,7 +84,7 @@ button {
 }
 
 .contact-btn {
-  color: #;
+  color: var(--clr-main-black);
 }
 
 /* Navbar hover */
