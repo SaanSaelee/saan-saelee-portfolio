@@ -391,6 +391,10 @@ button {
   margin: 2rem;
 }
 
+.certs-wrapper {
+  padding: 4rem;
+}
+
 .certs-section-header {
   text-align: center;
   font-size: 4rem;
