@@ -227,6 +227,13 @@ button {
   margin: 2rem;
 }
 
+.skills-section-header {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 2rem;
+}
+
 .skills-hard,
 .skills-soft {
   width: 100%;
@@ -235,19 +242,12 @@ button {
   justify-content: center;
 }
 
-.skills-section-header {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 500;
-  margin: 2rem;
-}
-
 /* Skills section header */
-.skills-hard div,
+/* .skills-hard div,
 .skills-soft div {
   display: flex;
   align-items: center;
-}
+} */
 
 .skills-header h3,
 .skills-hard h4,
@@ -791,8 +791,8 @@ button {
   .skills-soft {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     padding: 2rem;
   }
 
