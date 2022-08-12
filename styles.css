@@ -167,9 +167,9 @@ button {
 /* *************************** START SKILLS SECTION *************************** */
 
 #skills {
+  background: var(--clr-main-black);
   width: 100%;
   min-height: 100vh;
-  background: var(--clr-main-black);
   color: white;
   display: flex;
   justify-content: center;
@@ -217,10 +217,10 @@ button {
 }
 
 .skills-wrap li {
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
-/* *************************** END SKILLS SECTION *************************** */
+/* *************************** END SKILLS *************************** */
 
 /* *************************** START PROJECTS SECTION *************************** */
 
@@ -465,20 +465,20 @@ button {
 
   /* SKILLS SECTION */
 
-  .skills-section-header {
-    font-size: calc(4rem - 10%);
+  .skills-wrap h1 {
+    font-size: 3.6rem
   }
 
-  .skills-header h3,
-  .skills-hard h4,
-  .skills-soft h4 {
-    font-size: calc(2rem - 10%);
+  .skills-wrap h2 {
+    font-size: 2.6rem;
   }
 
-  .skills-hard li,
-  .skills-soft li {
-    font-size: calc(1.6rem - 10%);
+  .skills-hard h3,
+  .skills-soft h3{
+    font-size: 1.8rem;
   }
+
+  /* END SKILLS */
 
   /* PROJECTS SECTION */
 
