@@ -116,7 +116,7 @@ button {
 
 /* *************************** END NAVBAR *************************** */
 
-/* *************************** START WELCOME SECTION *************************** */
+/* *************************** START WELCOME  *************************** */
 
 #welcome {
   width: 100%;
@@ -328,7 +328,7 @@ button {
 }
 
 .school p {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .csus {
@@ -427,41 +427,40 @@ button {
 @media (min-width: 992px) and (max-width: 1199px) {
   /* NAVBAR */
 
-  nav ul li {
-    font-size: calc(2rem - 10%);
+  header {
+    font-size: 1.8rem;
+  }
+
+  .nav-menu {
+    gap: 2rem;
   }
 
   button {
-    font-size: calc(2rem - 10%);
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    padding: 0.8rem 1.8rem;
   }
+
+  /* END NAVBAR */
 
   /* WELCOME SECTION */
 
-  .about-left-wrap {
-    margin: 2rem 0 2rem 6rem;
-  }
-  .about-right-wrap {
-    margin: 2rem 2rem 2rem 0;
+  .welcome-wrap {
+    max-width: 880px;
   }
 
-  .about-left-wrap div,
-  .about-right-pic {
-    margin: 2rem 0;
-    padding: 0 3rem;
+  .about-left-wrap h1 {
+    font-size: 3.6rem;
   }
 
-  .about-left-header h1 {
-    font-size: calc(4rem - 10%);
+  .about-left-bio {
+    font-size: 1.8rem;
+    line-height: 3rem;
   }
 
-  .about-left-summary {
-    font-size: calc(2rem - 10%);
-    line-height: calc(2.8rem - 10%);
-  }
-
-  .about-left-sub-summary {
-    font-size: calc(1.6rem - 10%);
-    line-height: calc(2.2rem - 10%);
+  .about-left-sub-bio {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
   }
 
   /* SKILLS SECTION */
