@@ -1,12 +1,14 @@
-// Script function - Use onclick inline on .toggle-btn
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-// function myHamburger() {
-//   let hamburger = document.getElementById("navbar");
-//   hamburger.classList.toggle("show");
-// }
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
 
-let hamburger = document.querySelector(".toggle-btn");
-
-hamburger.addEventListener("click", function () {
-  navbar.classList.toggle("show");
+document.querySelectorAll(".nav-link").forEach((n) => {
+  n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("navMenu");
+  });
 });

@@ -13,22 +13,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
 }
 
-html,
-body {
+html {
   width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-
+  height: 100%;
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: "Montserrat", sans-serif, helvetica;
   letter-spacing: 0.1rem;
-}
-
-body {
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 li {
@@ -40,8 +37,8 @@ a {
   color: #fff;
 }
 
-img {
-  display: block;
+button {
+  border: none;
 }
 
 /* *************************** END BASE STYLES *************************** */
@@ -49,37 +46,37 @@ img {
 /* *************************** START NAVBAR *************************** */
 
 header {
-  display: inline-block;
-  width: 100%;
-  padding: 1rem;
-  background-color: var(--clr-main-black);
+  background: var(--clr-main-black);
   position: fixed;
-  z-index: 100;
-  color: var(--clr-main-black);
-}
-
-nav {
-  float: right;
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 70px;
   font-size: 2rem;
-  font-weight: 300;
 }
 
-nav ul li a {
-  display: inline-block;
-  text-decoration: none;
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  min-height: 7rem;
+}
+
+.nav-logo {
+  display: none;
+  font-size: 4rem;
+  margin-left: 3rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
 
 button {
-  margin: 1rem;
+  margin-right: 3rem;
   font-size: 2rem;
-  font-weight: 500;
   padding: 1rem 2rem;
-  border: none;
   cursor: pointer;
 }
 
@@ -87,8 +84,23 @@ button {
   color: var(--clr-main-black);
 }
 
+.hamburger {
+  display: none;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  background-color: #fff;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 300ms ease-in-out;
+}
+
 /* Navbar hover */
-.hover a:after {
+.nav-item :after {
   display: block;
   content: "";
   border-bottom: 2px solid #fff;
@@ -97,103 +109,54 @@ button {
   transition: transform 250ms ease-in-out;
 }
 
-.hover a:hover:after {
+.nav-item :hover:after {
   transform: scaleX(1);
-}
-
-/* Toggle button & Logo on Navbar- Hidden by default */
-.logo {
-  float: left;
-  position: relative;
-  left: 1rem;
-  color: #fff;
-  font-size: 3rem;
-  font-weight: 400;
-  display: none;
-  padding: 1rem;
-  cursor: pointer;
-}
-
-.toggle-btn {
-  width: 35px;
-  position: absolute;
-  right: 3rem;
-  top: 2.5rem;
-  display: none;
-  cursor: pointer;
-}
-
-.toggle-btn span {
-  display: inline-block;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  float: left;
-  margin-bottom: 8px;
 }
 
 /* *************************** END NAVBAR *************************** */
 
 /* *************************** START WELCOME SECTION *************************** */
 
-.welcome-section-wrapper {
-  /* Responsive viewing settings */
+#welcome-section {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
-
-  /* For centering content */
   display: flex;
-  align-items: center;
-  justify-content: center;
+}
 
+.welcome-section-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   color: var(--clr-main-black);
 }
 
-.about-left-wrapper {
+.about-left-wrap {
   width: 50%;
-  margin: 6rem 0 6rem 6rem;
-}
-
-.about-right-wrapper {
-  width: 50%;
-  margin: 6rem 6rem 6rem 0;
-}
-
-.about-right-wrapper,
-.about-right-pic {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-/* Padding between the elements on the left half */
-.about-left-wrapper div,
-.about-right-pic {
-  margin: 2rem 0;
-  padding: 0 5rem;
-}
-
-.about-left-header h1 {
+.about-left-header {
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.about-left-summary {
+.about-left-bio {
   font-size: 2rem;
   font-weight: 400;
-  line-height: 2.8rem;
+  line-height: 3.2rem;
 }
 
-.about-left-sub-summary {
+.about-left-sub-bio {
   font-size: 1.6rem;
   font-weight: 200;
-  line-height: 2.2rem;
+  line-height: 2.8rem;
   width: 75%;
 }
 
 .profile-pic {
-  width: 60%;
+  max-width: 40rem;
 }
 
 /* *************************** END WELCOME SECTION *************************** */
@@ -203,19 +166,11 @@ button {
 #skills {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
   background: var(--clr-main-black);
   color: white;
-}
-
-.skills-section-wrapper {
-  padding: 6rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .front-end,
@@ -226,27 +181,31 @@ button {
 .super-skills {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
 }
 
-.skills-section-header {
+.skills-wrap h1 {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
   margin: 2rem;
 }
 
-.skills-hard,
-.skills-soft {
-  width: 100%;
-  padding: 2rem 4rem;
-  display: flex;
-  justify-content: center;
+.skills-wrap h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
-.skills-header h3,
-.skills-hard h4,
-.skills-soft h4 {
+.skills-hard,
+.skills-soft {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin: 4rem 0;
+}
+
+.skills-hard h3,
+.skills-soft h3 {
   font-weight: 500;
   font-size: 2rem;
   border-bottom: 1px solid #fff;
@@ -254,9 +213,8 @@ button {
   text-align: center;
 }
 
-.skills-hard li,
-.skills-soft li {
-  margin: 0.5rem;
+.skills-wrap li {
+  margin: 1rem;
 }
 
 /* *************************** END SKILLS SECTION *************************** */
@@ -386,7 +344,7 @@ button {
   margin: 2rem;
 }
 
-.certs-wrapper {
+.certs-wrap {
   padding: 4rem;
 }
 
@@ -486,14 +444,14 @@ button {
 
   /* WELCOME SECTION */
 
-  .about-left-wrapper {
+  .about-left-wrap {
     margin: 2rem 0 2rem 6rem;
   }
-  .about-right-wrapper {
+  .about-right-wrap {
     margin: 2rem 2rem 2rem 0;
   }
 
-  .about-left-wrapper div,
+  .about-left-wrap div,
   .about-right-pic {
     margin: 2rem 0;
     padding: 0 3rem;
@@ -596,15 +554,15 @@ button {
 
   /* WELCOME SECTION */
 
-  .about-left-wrapper {
+  .about-left-wrap {
     margin: 1rem 0 1rem 5rem;
   }
 
-  .about-right-wrapper {
+  .about-right-wrap {
     margin: 1rem 1rem 1rem 0;
   }
 
-  .about-left-wrapper div,
+  .about-left-wrap div,
   .about-right-pic {
     margin: 1rem 0;
     padding: 0 1.5rem;
@@ -698,36 +656,58 @@ button {
 @media only screen and (max-width: 767px) {
   /* NAVBAR */
 
-  .logo {
-    display: block;
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    font-size: 3rem;
   }
 
   .name-hidden {
     display: none;
   }
 
-  .toggle-btn {
+  .hamburger {
     display: block;
   }
 
-  nav {
-    display: none;
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--clr-main-black);
+    top: 70px;
+    left: -80rem;
     width: 100%;
-    border-top: 1px solid #fff;
-    padding-top: 10px;
-    margin-top: 10px;
-  }
-
-  nav.show {
-    display: block;
+    gap: 0;
+    text-align: center;
+    transition: 250ms;
     text-align: center;
   }
 
-  nav ul li {
-    width: 100%;
-    font-size: 2rem;
-    padding: 0.5rem 0;
-    margin-bottom: 0.5rem;
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 0.5rem;
+  }
+
+  .nav-item :after {
+    border-bottom: 0.5px solid #fff;
   }
 
   button {
@@ -735,13 +715,9 @@ button {
     margin: 0.5rem;
   }
 
-  .hover a:after {
-    border-bottom: 0.5px solid #fff;
-  }
-
   /* WELCOME SECTION */
 
-  .welcome-section-wrapper {
+  .welcome-section-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -750,17 +726,17 @@ button {
     color: var(--clr-main-black);
   }
 
-  .about-left-wrapper {
+  .about-left-wrap {
     margin: 10rem auto 0;
     width: 100%;
   }
 
-  .about-right-wrapper {
+  .about-right-wrap {
     margin: 0 auto;
     width: 100%;
   }
 
-  .about-left-wrapper div {
+  .about-left-wrap div {
     width: 100%;
   }
 
