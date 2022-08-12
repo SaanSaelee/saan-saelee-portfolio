@@ -327,6 +327,10 @@ button {
   margin: 1rem;
 }
 
+.school p {
+  margin: .5rem 0;
+}
+
 .csus {
   font-style: italic;
 }
@@ -336,33 +340,23 @@ button {
 /* *************************** START CERTS SECTION *************************** */
 
 #certs {
+  color: var(--clr-main-black);
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: var(--clr-main-black);
 }
 
-#certs li {
+.certs-wrap h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
   margin: 2rem;
 }
 
-.certs-wrap {
-  padding: 4rem;
-}
-
-.certs-section-header {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 500;
-  margin: 5rem;
-}
-
-.certs {
-  font-size: 2rem;
+.certs li {
+  margin: 2rem;
 }
 
 .certs-bold {
@@ -374,31 +368,26 @@ button {
 /* *************************** START CONTACT SECTION *************************** */
 
 #contact {
+  background: var(--clr-main-black);
+  color: white;
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: var(--clr-main-black);
-  color: white;
 }
 
-.contact-section-header {
-  text-align: center;
+.contact-wrap h1 {
   font-size: 4rem;
   font-weight: 500;
-  margin: 0 0 5rem;
+  text-align: center;
 }
 
 .contact-links {
   display: flex;
   justify-content: center;
-}
-
-.contact-details {
-  margin: 1rem;
+  margin: 4rem;
+  gap: 2rem;
 }
 
 .contact-links a:after {
@@ -419,15 +408,13 @@ button {
 /* *************************** START FOOTER SECTION *************************** */
 
 #footer {
+  background: #fff;
+  color: var(--clr-main-black);
   width: 100%;
   height: 15vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: #fff;
-  color: var(--clr-main-black);
 }
 
 /* *************************** END FOOTER SECTION *************************** */
