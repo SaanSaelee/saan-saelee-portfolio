@@ -222,7 +222,7 @@ button {
 
 /* *************************** END SKILLS *************************** */
 
-/* *************************** START PROJECTS SECTION *************************** */
+/* *************************** START PROJECTS *************************** */
 
 #projects {
   width: 100%;
@@ -480,15 +480,17 @@ button {
 
   /* END SKILLS */
 
-  /* PROJECTS SECTION */
+  /* PROJECTS */
 
-  .projects-section-header {
-    font-size: calc(4rem - 10%);
+  .projects-wrap h1 {
+    font-size: 3.6rem;
   }
 
   .project-title {
-    font-size: calc(2rem - 10%);
+    font-size: 1.8rem;
   }
+
+  /* END PROJECTS */
 
   /* EDUCATION SECTION */
 
