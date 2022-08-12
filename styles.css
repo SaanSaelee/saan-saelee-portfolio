@@ -265,20 +265,13 @@ button {
   width: 100%;
 }
 
-.project-image {
-  /* width: 100%; */
-  /* object-fit: cover; */
-}
-
 .image {
   overflow: hidden;
-  /* display: inline-block; */
 }
 
 .image img {
   width: 100%;
   display: block;
-  /* height: auto; */
 }
 
 .image .zoom-in img {
@@ -291,9 +284,9 @@ button {
   opacity: 0.7;
 }
 
-/* *************************** END PROJECTS SECTION *************************** */
+/* *************************** END PROJECTS *************************** */
 
-/* *************************** START EDUCATION SECTION *************************** */
+/* *************************** START EDUCATION *************************** */
 
 #education {
   background: var(--clr-main-black);
@@ -335,9 +328,9 @@ button {
   font-style: italic;
 }
 
-/* *************************** END EDUCATION SECTION *************************** */
+/* *************************** END EDUCATION *************************** */
 
-/* *************************** START CERTS SECTION *************************** */
+/* *************************** START CERTS *************************** */
 
 #certs {
   color: var(--clr-main-black);
@@ -473,11 +466,6 @@ button {
     font-size: 2.6rem;
   }
 
-  .skills-hard h3,
-  .skills-soft h3{
-    font-size: 1.8rem;
-  }
-
   /* END SKILLS */
 
   /* PROJECTS */
@@ -492,40 +480,30 @@ button {
 
   /* END PROJECTS */
 
-  /* EDUCATION SECTION */
+  /* EDUCATION */
 
-  .education-section-header {
-    font-size: calc(4rem - 10%);
-  }
-
-  .school-header h3 {
-    font-size: calc(2rem - 10%);
-  }
-
-  .course {
-    font-size: calc(1.6rem - 10%);
+  .education-wrap h1 {
+    font-size: 3.6rem;
   }
 
   /* CERTS SECTION */
 
-  .certs-section-header {
-    font-size: calc(4rem - 10%);
+  .certs-wrap h1 {
+    font-size: 3.6rem;
   }
 
-  .certs {
-    font-size: calc(2rem - 10%);
-  }
+  /* END EDUCATION */
 
   /* CONTACT SECTION */
 
-  .contact-section-header {
-    font-size: calc(4rem - 10%);
+  .contact-wrap h1 {
+    font-size: 3.6rem
   }
 
   /* FOOTER SECTION */
 
   #footer {
-    font-size: calc(1.6rem - 10%);
+    font-size: 1.4rem;
   }
 }
 
