@@ -168,9 +168,9 @@ button {
 
 #skills {
   background: var(--clr-main-black);
+  color: white;
   width: 100%;
   min-height: 100vh;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,6 +184,10 @@ button {
 .super-skills {
   display: flex;
   flex-direction: column;
+}
+
+.skills-wrap {
+  padding: 5rem;
 }
 
 .skills-wrap h1 {
@@ -710,7 +714,7 @@ button {
 
   .welcome-wrap {
     flex-direction: column;
-    /* max-width: 100%; */
+    max-width: 100%;
   }
 
   .about-left-wrap {
@@ -770,10 +774,10 @@ button {
 
   /* PROJECTS */
 
-.projects-wrap {
-  padding: 5rem;
-  max-width: 100%;
-}
+  .projects-wrap {
+    padding: 5rem;
+    max-width: 100%;
+  }
 
   .projects-wrap h1 {
     font-size: 3rem;
@@ -812,10 +816,6 @@ button {
 
   /* CERTS SECTION */
 
-  .certs-wrap {
-    padding: 5rem;
-  }
-
   .certs-wrap h1 {
     font-size: 3rem;
   }
@@ -826,17 +826,9 @@ button {
 
   /* CONTACT SECTION */
 
-  .contact-wrap {
-    padding: 5rem;
-  }
-
   .contact-wrap h1 {
     font-size: 3rem;
   }
-
-  /* .contact-links::after {
-    border-bottom: 1px solid #fff;
-  } */
 
   .contact-links::after {
     border-bottom: 1px solid #fff;
