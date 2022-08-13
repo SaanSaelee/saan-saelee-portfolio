@@ -43,7 +43,7 @@ button {
 
 /* *************************** END BASE STYLES *************************** */
 
-/* *************************** START NAVBAR *************************** */
+/* *************************** NAVBAR *************************** */
 
 header {
   background: var(--clr-main-black);
@@ -116,7 +116,7 @@ button {
 
 /* *************************** END NAVBAR *************************** */
 
-/* *************************** START WELCOME  *************************** */
+/* *************************** WELCOME  *************************** */
 
 #welcome {
   width: 100%;
@@ -162,9 +162,9 @@ button {
   max-width: 40rem;
 }
 
-/* *************************** END WELCOME SECTION *************************** */
+/* *************************** END WELCOME *************************** */
 
-/* *************************** START SKILLS SECTION *************************** */
+/* *************************** SKILLS *************************** */
 
 #skills {
   background: var(--clr-main-black);
@@ -222,7 +222,7 @@ button {
 
 /* *************************** END SKILLS *************************** */
 
-/* *************************** START PROJECTS *************************** */
+/* *************************** PROJECTS *************************** */
 
 #projects {
   width: 100%;
@@ -286,7 +286,7 @@ button {
 
 /* *************************** END PROJECTS *************************** */
 
-/* *************************** START EDUCATION *************************** */
+/* *************************** EDUCATION *************************** */
 
 #education {
   background: var(--clr-main-black);
@@ -330,7 +330,7 @@ button {
 
 /* *************************** END EDUCATION *************************** */
 
-/* *************************** START CERTS *************************** */
+/* *************************** CERTS *************************** */
 
 #certs {
   color: var(--clr-main-black);
@@ -356,9 +356,9 @@ button {
   font-weight: 500;
 }
 
-/* *************************** END CERTS SECTION *************************** */
+/* *************************** END CERTS *************************** */
 
-/* *************************** START CONTACT SECTION *************************** */
+/* *************************** CONTACT *************************** */
 
 #contact {
   background: var(--clr-main-black);
@@ -396,9 +396,9 @@ button {
   transform: scaleX(1);
 }
 
-/* *************************** END CONTACT SECTION *************************** */
+/* *************************** END CONTACT *************************** */
 
-/* *************************** START FOOTER SECTION *************************** */
+/* *************************** FOOTER *************************** */
 
 #footer {
   background: #fff;
@@ -410,7 +410,7 @@ button {
   justify-content: center;
 }
 
-/* *************************** END FOOTER SECTION *************************** */
+/* *************************** END FOOTER  ************************** */
 
 /* ***************** Large devices only ***************** */
 @media (max-width: 1920) {
@@ -429,8 +429,8 @@ button {
   }
 
   button {
-    margin-right: 2rem;
     font-size: 1.8rem;
+    margin-right: 2rem;
     padding: 0.8rem 1.8rem;
   }
 
@@ -511,16 +511,21 @@ button {
 @media (min-width: 768px) and (max-width: 991px) {
   /* NAVBAR */
 
-  nav ul li {
-    font-size: calc(2rem - 20%);
-    padding: 0.5rem 0.5rem;
+  header {
+    font-size: 1.6rem;
+  }
+
+  .nav-menu {
+    gap: 1.6rem;
   }
 
   button {
-    font-size: calc(2rem - 20%);
+    font-size: 1.6rem;
+    margin-right: 1.5rem;
+    padding: 0.8rem 1.8rem;
   }
 
-  .hover a:after {
+  .nav-item :after {
     border-bottom: 1px solid #fff;
   }
 
