@@ -160,6 +160,7 @@ button {
 }
 
 .profile-pic {
+  width: 40%;
   max-width: 40rem;
 }
 
@@ -545,7 +546,7 @@ button {
   }
 
   .profile-pic {
-    max-width: 25rem;
+    /* max-width: 25rem; */
   }
 
   /* SKILLS */
@@ -732,7 +733,7 @@ button {
   }
 
   .profile-pic {
-    max-width: 25rem;
+    width: 70%;
   }
 
   /* SKILLS */
