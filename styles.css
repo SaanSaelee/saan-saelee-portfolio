@@ -710,6 +710,7 @@ button {
     flex-direction: column;
     gap: 0;
     width: 100%;
+    margin: 10rem 0;
   }
 
   .about-left-wrap {
@@ -733,6 +734,7 @@ button {
   }
 
   .profile-pic {
+    margin-top: 3rem;
     width: 70%;
   }
 
