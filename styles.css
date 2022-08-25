@@ -267,9 +267,11 @@ button {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* grid-template-rows: 300px; */
   grid-gap: 4rem;
   width: 100%;
+  object-fit: cover;
 }
 
 .image {
@@ -278,7 +280,6 @@ button {
 
 .image img {
   width: 100%;
-  object-fit: contain;
   display: block;
 }
 
