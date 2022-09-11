@@ -37,6 +37,11 @@ a {
 
 button {
   border: none;
+  font-family: inherit;
+  margin-right: 3rem;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
 }
 
 /* *************************** END BASE STYLES *************************** */
@@ -71,13 +76,6 @@ header {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-}
-
-button {
-  margin-right: 3rem;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  cursor: pointer;
 }
 
 .contact-btn {
